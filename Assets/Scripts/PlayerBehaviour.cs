@@ -5,7 +5,7 @@ public class PlayerBehaviour : MonoBehaviour
     #region Private Fields
 
     [SerializeField]
-    private CharacterData _characterData;
+    private CharacterData _character;
 
     #endregion
 
@@ -15,7 +15,7 @@ public class PlayerBehaviour : MonoBehaviour
     public void Translate(float horizontal, float vertical)
     {
         Vector3 direction = new Vector3(horizontal, vertical, 0);
-        transform.Translate(direction * _characterData.Speed * Time.deltaTime);
+        transform.Translate(direction * _character.Speed * Time.deltaTime);
     }
 
     #endregion

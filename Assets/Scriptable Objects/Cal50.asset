@@ -9,7 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7953c57bc73ec1b4b9d7c19095edfbdc, type: 3}
-  m_Name: CharacterBase
+  m_Script: {fileID: 11500000, guid: 198a26ce3cd8e904ca7ea86215d6d3c7, type: 3}
+  m_Name: Cal50
   m_EditorClassIdentifier: 
-  _speed: 5
+  _lifeTime: 5
+  _force: 600
+  _rb: {fileID: 7491581833757144687, guid: 74b581d4488c2c045b0a670761e69cdd, type: 3}

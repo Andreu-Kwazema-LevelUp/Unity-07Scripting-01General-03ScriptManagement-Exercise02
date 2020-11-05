@@ -10,15 +10,20 @@ public class ProjectilData : ScriptableObject
     
     [SerializeField]
     private float _force;
-    
+
+    [SerializeField]
+    private Rigidbody _rb;
+
     #endregion
 
 
     #region Public Attributes
 
-    public float LifeTime { get => _lifeTime; set => _lifeTime = value; }
+    public float LifeTime { get => _lifeTime; }
     
-    public float Force { get => _force; set => _force = value; }
-    
+    public float Force { get => _force; }
+
+    public Rigidbody Rb { get => _rb; }
+
     #endregion
 }

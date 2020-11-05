@@ -11,7 +11,6 @@ public class WeaponData : ScriptableObject
     [SerializeField]
     private int maxBullets;
 
-    [SerializeField]
     private Vector3 position;
 
     #endregion
@@ -19,11 +18,11 @@ public class WeaponData : ScriptableObject
 
     #region Public Attributes
 
-    public GameObject Projectil { get => projectil; set => projectil = value; }
+    public GameObject Projectil { get => projectil; }
     
-    public int MaxBullets { get => maxBullets; set => maxBullets = value; }
+    public int MaxBullets { get => maxBullets; }
 
-    public Vector3 Position { get => position; set => position = value; }
+    public Vector3 Position { get => position; }
 
     #endregion
 }
