@@ -16,8 +16,7 @@ public class WeaponBehaviour : MonoBehaviour
     {
         var projectile = Instantiate(_weapon.Projectil, transform.position, Quaternion.identity);
 
-        //Algun cambio recomendable?
-        projectile.GetComponent<ProjectilBehaviour>().Move(GetMousePosition());
+        projectile.Move(GetMousePosition());
     }
 
     #endregion

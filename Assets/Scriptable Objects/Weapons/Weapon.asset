@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d7317313e631124ea4e93de802e4831, type: 3}
   m_Name: Weapon
   m_EditorClassIdentifier: 
-  projectil: {fileID: 2301609248418414637, guid: 0551d7f55a53b654eb00da2f6bb45d2e, type: 3}
+  projectil: {fileID: 8838318857547255460, guid: 0551d7f55a53b654eb00da2f6bb45d2e, type: 3}
   maxBullets: 20

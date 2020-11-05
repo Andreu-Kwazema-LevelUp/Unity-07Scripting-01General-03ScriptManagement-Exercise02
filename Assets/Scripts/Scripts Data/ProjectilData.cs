@@ -11,9 +11,6 @@ public class ProjectilData : ScriptableObject
     [SerializeField]
     private float _force;
 
-    [SerializeField]
-    private Rigidbody _rb;
-
     #endregion
 
 
@@ -22,8 +19,6 @@ public class ProjectilData : ScriptableObject
     public float LifeTime { get => _lifeTime; }
     
     public float Force { get => _force; }
-
-    public Rigidbody Rb { get => _rb; }
 
     #endregion
 }

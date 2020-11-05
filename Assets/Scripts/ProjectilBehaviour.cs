@@ -9,6 +9,18 @@ public class ProjectilBehaviour : MonoBehaviour
     [SerializeField]
     private ProjectilData _projectil;
 
+    private Rigidbody _myRigibody;
+
+    #endregion
+
+
+    #region Unity Lifecycle
+
+    private void Awake()
+    {
+        _myRigibody = GetComponent<Rigidbody>();
+    }
+
     #endregion
 
 
@@ -17,8 +29,7 @@ public class ProjectilBehaviour : MonoBehaviour
     public void Move(Vector3 mousePosition)
     {
         var projectileDelta = mousePosition - transform.position;
-        //Por algun motivo no accede correctamente en el RB
-        _projectil.Rb.AddForce(projectileDelta.normalized * _projectil.Force);
+        _myRigibody.AddForce(projectileDelta.normalized * _projectil.Force);
 
         StartCoroutine(LifeTime(_projectil.LifeTime));
     }

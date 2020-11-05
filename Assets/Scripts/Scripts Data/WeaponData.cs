@@ -6,7 +6,7 @@ public class WeaponData : ScriptableObject
     #region Private Fields
 
     [SerializeField]
-    private GameObject projectil;
+    private ProjectilBehaviour projectil;
 
     [SerializeField]
     private int maxBullets;
@@ -18,7 +18,7 @@ public class WeaponData : ScriptableObject
 
     #region Public Attributes
 
-    public GameObject Projectil { get => projectil; }
+    public ProjectilBehaviour Projectil { get => projectil; }
     
     public int MaxBullets { get => maxBullets; }
 
