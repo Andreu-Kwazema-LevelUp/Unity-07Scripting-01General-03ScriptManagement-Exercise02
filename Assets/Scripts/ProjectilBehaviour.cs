@@ -17,6 +17,7 @@ public class ProjectilBehaviour : MonoBehaviour
     public void Move(Vector3 mousePosition)
     {
         var projectileDelta = mousePosition - transform.position;
+        //Por algun motivo no accede correctamente en el RB
         _projectil.Rb.AddForce(projectileDelta.normalized * _projectil.Force);
 
         StartCoroutine(LifeTime(_projectil.LifeTime));

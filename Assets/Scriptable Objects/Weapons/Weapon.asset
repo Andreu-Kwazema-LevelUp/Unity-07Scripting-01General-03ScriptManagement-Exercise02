@@ -14,4 +14,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectil: {fileID: 2301609248418414637, guid: 0551d7f55a53b654eb00da2f6bb45d2e, type: 3}
   maxBullets: 20
-  position: {x: 0, y: 0, z: 0}
