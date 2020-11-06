@@ -2,32 +2,41 @@
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField]
-    private float _speed = 5;
+    #region Private Fields
 
     [SerializeField]
-    private Rigidbody _projectil;
+    private PlayerBehaviour _playerBehaviour;
 
-    [SerializeField]
-    private float _projectileForce = 20;
+    #endregion
+
+
+    #region Unity Lifecycle
+
+    private void Awake()
+    {
+        if (_playerBehaviour == null)
+            _playerBehaviour = GetComponent<PlayerBehaviour>();
+    }
 
     private void Update()
     {
-        var horizontal = Input.GetAxis("Horizontal");
-        var vertical = Input.GetAxis("Vertical");
-        var direction = new Vector3(horizontal, vertical, 0);
-        transform.Translate(direction * _speed * Time.deltaTime);
-
-        if (Input.GetButtonDown("Fire1"))
-        {
-            var projectile = Instantiate(_projectil, transform.position, Quaternion.identity);
-            var mouseInput = Input.mousePosition;
-            mouseInput.z = 10;
-            var mousePosition = Camera.main.ScreenToWorldPoint(mouseInput);
-            mousePosition.z = 0;
-            var projectileDelta = mousePosition - transform.position;
-            projectile.AddForce(projectileDelta.normalized * _projectileForce);
-        }
+        InputTranslate();
     }
 
+    #endregion
+
+
+    #region Private Methods
+
+    private void InputTranslate()
+    {
+        float horizontal = Input.GetAxis("Horizontal");
+        float vertical = Input.GetAxis("Vertical");
+
+        //usar un evento?
+        if (horizontal != 0 || vertical != 0)
+            _playerBehaviour?.Translate(horizontal, vertical);
+    }
+
+    #endregion
 }
